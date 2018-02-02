@@ -1,0 +1,31 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /                    controllers.Application.index
+
+GET         /home                controllers.Application.index
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file        controllers.Assets.at(path="/public", file)
+
+GET         /sign_in_up          controllers.Application.signInUp
+
+GET         /bestsellers         controllers.Application.carouselBS
+
+POST        /sign_in_up          controllers.Application.signUp
+
+GET         /store_finder        controllers.Application.storeFinder
+
+GET         /trump               controllers.Application.trump
+
+GET         /sign_out            controllers.Application.logOut
+
+GET         /basket              controllers.Application.basket
+
+GET         /bestsellers/:id     controllers.Application.bookPage(id : Int)
+
+GET         /addToBasket/:id     controllers.Application.addToBasket(id: Int)
+
+GET         /deleteFromBasket/:id controllers.Application.deleteFromBasket(id: Int)

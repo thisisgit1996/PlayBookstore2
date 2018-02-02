@@ -1,0 +1,13 @@
+@(user: String, book: Book)
+
+@main(book.name, user) {
+
+    <h2> @book.name </h2>
+    <h3> @book.author (author) </h3>
+    <img src="@routes.Assets.at("images/book" + book.id.toString + ".jpg")" class="img-responsive">
+    </fieldset>
+    <a href = "/addToBasket/@book.id.toString">
+        <button type="submit" class="btn btn-primary">Add to Basket</button>
+    </a>
+    </fieldset>
+}

@@ -1,0 +1,13 @@
+@(form: Form[Customer], user: String)(implicit messages: Messages)
+
+@main("SignInUp", user) {
+
+    @helper.form(routes.Application.signUp()) {
+        @helper.inputText(form("email"), 'id -> "SomeId", 'class -> "SomeClass")
+        @helper.inputPassword(form("password"))
+        <button type=”submit”>Submit</button>
+    }
+
+
+
+}

@@ -1,0 +1,20 @@
+@(user: String, basket: Basket)
+
+@main("Basket for " + user, user) {
+
+    <h2> user  </h2>
+    <h3> Basket: </h3>
+    <div>
+        @for(i <- 0 to basket.books.length - 1){
+            <h4> @basket.books(i).name </h4>
+            <h5> @basket.books(i).author (author) </h5>
+            <img src="@routes.Assets.at("images/book" + basket.books(i).id.toString + ".jpg")" class="img-responsive">
+            </fieldset>
+            <a href = "../deleteFromBasket/@i">
+                <button type="submit" class="btn btn-primary">Delete</button>
+            </a>
+            </fieldset>
+
+        }
+    </div>
+}
